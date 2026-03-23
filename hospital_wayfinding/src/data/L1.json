@@ -1,0 +1,20 @@
+{
+  "rooms": [
+    { "id": "P1", "name": "Phục vụ", "type": "Dịch vụ Đồ ăn", "x": 5, "z": 3, "w": 10, "h": 6, "color": "#cdebff" },
+    { "id": "P2", "name": "Kho", "type": "Lưu trữ Logis", "x": 15, "z": 3, "w": 10, "h": 6, "color": "#cdebff" },
+    { "id": "P3", "name": "Khu kỹ thuật", "type": "Hạ tầng Kiosk", "x": 25, "z": 3, "w": 10, "h": 6, "color": "#c7c4e5" },
+    { "id": "P4", "name": "Phòng nghỉ", "type": "Khu nội bộ NS", "x": 35, "z": 3, "w": 10, "h": 6, "color": "#cdebff" },
+    { "id": "P5", "name": "Lối ra", "type": "Cửa", "x": 44, "z": 3, "w": 8, "h": 6, "color": "#b9ecd6" },
+    { "id": "P6", "name": "Toilet", "type": "Khu vực WC", "x": 5, "z": 9, "w": 10, "h": 6, "color": "#b9ecd6" },
+    { "id": "P10", "name": "Lễ tân", "type": "Tiếp đón VIP", "x": 44, "z": 9, "w": 8, "h": 6, "color": "#f5df9a" },
+    { "id": "P7", "name": "Quầy vé", "type": "Dịch vụ Mua sắm", "x": 5, "z": 15, "w": 10, "h": 6, "color": "#cdebff" },
+    { "id": "P9", "name": "Văn phòng", "type": "Ban Quản Lý", "x": 44, "z": 15, "w": 8, "h": 6, "color": "#cdebff" },
+    { "id": "P8", "name": "Thông tin", "type": "Hỗ trợ Khách hàng", "x": 5, "z": 21.5, "w": 10, "h": 7, "color": "#cdebff" }
+  ],
+  "features": [
+    { "type": "kiosk", "x": 24, "z": 14 },
+    { "type": "bus", "x": 32, "z": 23.5 },
+    { "type": "stairs", "x": 34, "z": 11 },
+    { "type": "path", "points": [[30, 23.5], [24, 23.5], [24, 15.5]] }
+  ]
+}
