@@ -24,7 +24,7 @@
   left: 0;
   width: 100vw;
   height: auto;
-  max-height: 28vh; /* <-- Siết cực hạn để chỉ lấy 28% màn hình, ưu tiên Bản đồ */
+  max-height: 50vh; /* Nới lỏng không gian cho màn hình hẹp iPhone SE */
   background: rgba(255, 255, 255, 0.85); /* Trong suốt nhẹ cho hiệu ứng kính */
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
@@ -32,10 +32,12 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding: 20px; /* Thu gọn khoảng trống thừa */
+  padding-bottom: calc(20px + env(safe-area-inset-bottom)); /* Hỗ trợ tai thỏ iPhone */
   box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.05); /* Bóng đổ êm để nhô lên */
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  overflow-y: auto; /* An toàn dự phòng nếu màn hình vẫn quá lùn */
 }
 
 /* Ghi chú vị trí */
@@ -53,15 +55,16 @@
 /* Thanh trượt chọn tầng */
 .floors-selection-bar {
   display: flex;
-  justify-content: flex-start; /* Nếu nhiều thì trượt từ trái sang */
-  gap: 8px;
-  background: #f1f5f9;
-  padding: 6px 14px;
-  border-radius: 100px;
-  width: max-content;
-  max-width: 90%;
-  margin: 0 auto 12px auto; /* Ép viền hẹp lại */
+  justify-content: flex-start;
+  gap: 12px;
+  background: transparent; /* Bỏ nền xám bao quanh để vuốt tự do */
+  padding: 6px 20px 10px 20px;
+  width: 100%;
+  margin: 0 0 12px 0;
   overflow-x: auto;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   
   /* Giấu thanh cuộn */
   -ms-overflow-style: none;  
@@ -72,12 +75,14 @@
 }
 
 .floor-btn {
-  background: transparent;
+  flex: 0 0 auto; /* Đảm bảo nút không bị bóp méo khi màn hình nhỏ */
+  scroll-snap-align: center;
+  background: #f1f5f9; /* Nền xám nằm trên từng nút riêng lẻ hiển thị trực quan hơn */
   border: none;
-  font-size: 14px; /* Giảm cỡ chữ nút bấm */
+  font-size: 14px;
   font-weight: 800;
   color: #94a3b8;
-  padding: 8px 20px; /* Thon gọn nút ấn */
+  padding: 10px 22px;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,9 +112,13 @@
 /* Thanh xoay danh sách phòng ban (Nằm dưới chọn tầng) */
 .rooms-horizontal-list {
   display: flex;
-  gap: 12px; /* Rút gọn khoảng cách ngang */
+  gap: 16px; /* Dãn khoảng cách ngang */
   overflow-x: auto;
-  padding: 5px 10px 10px 10px; /* Hạ padding */
+  padding: 10px 20px 20px 20px; /* Tăng lề vuốt hai bên để không bị cụt */
+  width: 100%;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   /* Giấu thanh scroll */
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -121,9 +130,11 @@
 /* Thẻ phòng ban */
 .room-kiosk-card {
   background: #ffffff;
-  border-radius: 16px; /* Bo góc nhẹ mảnh mai */
-  min-width: 120px; /* Bóp dẹt bề ngang (cũ là 170) */
-  padding: 12px; /* Ép viền trong lại chặt khít */
+  border-radius: 20px; /* Bo góc nhẹ quyến rũ */
+  flex: 0 0 auto; /* Ép thẻ luôn giữ đúng kích thước, không bị bóp méo */
+  width: 130px; /* Khóa bề ngang thẻ */
+  scroll-snap-align: start;
+  padding: 16px 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
