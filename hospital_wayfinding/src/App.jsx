@@ -56,7 +56,7 @@ function App() {
         
         {/* Indicator định vị mộc mạc */}
         <div className="ui-location-indicator">
-          📍 Vị trí hiện tại của bạn: <b>Tầng {activeFloor}</b>
+          📍 Vị trí hiện tại của bạn: <b>{String(activeFloor).toLowerCase().includes('tầng') ? activeFloor : `Tầng ${activeFloor}`}</b>
         </div>
 
         {/* 1. Thanh chọn Tầng (Horizontal list) */}
@@ -76,7 +76,7 @@ function App() {
 
         {/* Căn lề Header cho Danh sách phòng */}
         <div className="ui-section-title">
-          Danh sách phòng ban nổi bật ({activeFloor})
+          Danh sách phòng ({String(activeFloor).toLowerCase().includes('tầng') ? activeFloor : `Tầng ${activeFloor}`})
         </div>
 
         {/* 2. Danh sách các phòng ban (Nằm ngay bên dưới thanh chọn tầng) */}
