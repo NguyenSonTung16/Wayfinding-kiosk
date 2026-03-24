@@ -50,15 +50,14 @@ export class GroundLabel {
     const planeMat = new THREE.MeshBasicMaterial({
       map: textData.texture,
       transparent: true,
-      depthWrite: false 
+      depthWrite: false,
+      side: THREE.DoubleSide  // Hiện chữ từ cả 2 phía khi xoay camera
     });
     
     const plane = new THREE.Mesh(planeGeo, planeMat);
     
-    // Tự động neo bề rộng (Width) theo tham số yêu cầu (Ví dụ: hẻm rộng 4m thì chữ rộng 3.8m)
+    // Tự động neo bề rộng (Width) theo tham số yêu cầu
     const physicalWidth = customWidth; 
-    
-    // Chiều sâu (Height của chữ) sẽ tự động bị tụt xuống theo khung Width để giữ trọn vẹn Tỉ lệ gốc
     const physicalDepth = physicalWidth / textData.aspectRatio; 
     
     plane.scale.set(physicalWidth, physicalDepth, 1);
@@ -66,7 +65,18 @@ export class GroundLabel {
     const px = x - offsetX;
     const pz = z - offsetZ;
     plane.position.set(px, 0.05, pz);
+
+    // Dùng thứ tự YXZ: xoay ngang (Y) trước, rồi nằm phẳng (X) sau
+    // → tránh bị xoay dọc do Euler order mặc định XYZ
+    plane.rotation.order = 'YXZ';
     plane.rotation.x = -Math.PI / 2;
+
+    // Chỉ xoay quanh trục Y thế giới → chữ luôn hướng về phía camera trên mặt phẳng nằm ngang
+    plane.onBeforeRender = (renderer, scene, camera) => {
+      const dx = camera.position.x - plane.position.x;
+      const dz = camera.position.z - plane.position.z;
+      plane.rotation.y = Math.atan2(dx, dz);
+    };
     
     this.group.add(plane);
   }
