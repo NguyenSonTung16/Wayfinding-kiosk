@@ -55,9 +55,9 @@
 /* Thanh trượt chọn tầng */
 .floors-selection-bar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;   /* Căn giữa khi các nút vừa màn hình */
   gap: 12px;
-  background: transparent; /* Bỏ nền xám bao quanh để vuốt tự do */
+  background: transparent;
   padding: 6px 20px 10px 20px;
   width: 100%;
   margin: 0 0 12px 0;
