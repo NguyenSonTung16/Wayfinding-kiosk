@@ -1,0 +1,106 @@
+{
+  "benhvien": {
+    "idBV": "BV_HOSPITAL_01",
+    "tenBV": "Bệnh Viện Đa Khoa",
+    "tang": [
+      {
+        "idTang": "L1",
+        "tenTang": "Tầng trệt",
+        "phong": [
+          { "idPhong": "B1", "tenPhong": "Căn tin\nDinh Dưỡng", "x": 10, "z": 3, "w": 5, "h": 3, "color": "#fef08a", "door": { "x": 10, "z": 4.5 } },
+          { "idPhong": "X2", "tenPhong": "Nhà Xe\nÔ Tô", "x": 18, "z": 3, "w": 11, "h": 3, "color": "#e2e8f0", "door": { "x": 18, "z": 4.5 } },
+          { "idPhong": "BV", "tenPhong": "Bảo Vệ", "x": 24.5, "z": 3, "w": 2, "h": 3, "color": "#f5df9a", "door": { "x": 24.5, "z": 4.5 } },
+          { "idPhong": "X3", "tenPhong": "Nhà Xe\nMáy", "x": 40, "z": 3, "w": 13, "h": 3, "color": "#e2e8f0", "door": { "x": 40, "z": 4.5 } },
+          { "idPhong": "X1", "tenPhong": "Xe Cấp\nCứu", "x": 2, "z": 7, "w": 5, "h": 2, "color": "#e2e8f0", "door": { "x": 2, "z": 8 } },
+          { "idPhong": "U1", "tenPhong": "Sân\nBóng", "x": 2, "z": 12, "w": 5, "h": 4, "color": "#b9ecd6", "door": { "x": 2, "z": 14 } },
+          { "idPhong": "U2", "tenPhong": "Khoa\nKSNK", "x": 2, "z": 19, "w": 5, "h": 6, "color": "#e2e8f0", "door": { "x": 2, "z": 22 } },
+          { "idPhong": "U3", "tenPhong": "Lò Đốt\nRác", "x": 2, "z": 25, "w": 5, "h": 2, "color": "#cbd5e1", "door": { "x": 2, "z": 26 } },
+          { "idPhong": "P1", "tenPhong": "Khu\nKhám Bệnh", "x": 14, "z": 9, "w": 9, "h": 4, "color": "#ffcccb", "door": { "x": 14, "z": 11 } },
+          { "idPhong": "P2", "tenPhong": "Khoa Ngoại\nYHCT-Nhi", "x": 14, "z": 16, "w": 9, "h": 6, "color": "#90cdf4", "door": { "x": 14, "z": 19 } },
+          { "idPhong": "P3", "tenPhong": "Khoa\nPhụ Sản", "x": 14, "z": 23, "w": 9, "h": 4, "color": "#ffb6c1", "door": { "x": 14, "z": 25 } },
+          { "idPhong": "VP", "tenPhong": "Phòng\nViện Phí", "x": 20, "z": 13, "w": 3, "h": 2, "color": "#fef08a", "door": { "x": 20, "z": 14 } },
+          { "idPhong": "CC", "tenPhong": "Cấp Cứu ĐK\nHành Chính", "x": 32, "z": 9, "w": 21, "h": 4, "color": "#ffcccb", "door": { "x": 32, "z": 11 } },
+          { "idPhong": "TT", "tenPhong": "Khu Trung Tâm\nNội - XN", "x": 32, "z": 16, "w": 21, "h": 6, "color": "#90cdf4", "door": { "x": 32, "z": 19 } },
+          { "idPhong": "KD", "tenPhong": "Khoa Dược", "x": 32, "z": 23, "w": 21, "h": 4, "color": "#a7f3d0", "door": { "x": 32, "z": 25 } },
+          { "idPhong": "TS", "tenPhong": "Tán Sỏi\nCũ", "x": 49, "z": 8, "w": 5, "h": 7, "color": "#e2e8f0", "door": { "x": 49, "z": 11.5 } },
+          { "idPhong": "TN", "tenPhong": "Khoa Truyền\nNhiễm", "x": 49, "z": 18, "w": 5, "h": 9, "color": "#c7c4e5", "door": { "x": 49, "z": 22.5 } },
+          { "idPhong": "DT", "tenPhong": "Nhà Đại\nThể", "x": 49, "z": 26, "w": 5, "h": 3, "color": "#cbd5e1", "door": { "x": 49, "z": 27.5 } },
+          { "idPhong": "W1", "tenPhong": "Bể Nước\nSinh Hoạt", "x": 14, "z": 30, "w": 9, "h": 3, "color": "#90cdf4", "door": { "x": 14, "z": 31.5 } },
+          { "idPhong": "W2", "tenPhong": "Xử Lý\nNước Thải", "x": 26, "z": 30, "w": 9, "h": 3, "color": "#90cdf4", "door": { "x": 26, "z": 31.5 } },
+          { "idPhong": "W3", "tenPhong": "Nhà\nĐiện", "x": 35, "z": 30, "w": 5, "h": 3, "color": "#fef08a", "door": { "x": 35, "z": 31.5 } },
+          { "idPhong": "W4", "tenPhong": "Bể Nước\nNgầm", "x": 45, "z": 30, "w": 5, "h": 3, "color": "#90cdf4", "door": { "x": 45, "z": 31.5 } }
+        ],
+        "features": [
+          { "type": "kiosk", "x": 14, "z": 6 },
+          { "type": "elevator", "x": 48, "z": 12.5, "rotationY": -1.57 },
+          { "type": "ground_label", "text": "CỔNG\nCHÍNH", "x": 29.5, "z": 3.0, "width": 5.5 },
+          { "type": "ground_label", "text": "CỔNG\nPHỤ", "x": 6.0, "z": 3.5, "width": 2.8 }
+        ]
+      },
+      {
+        "idTang": "L2",
+        "tenTang": "Tầng 1",
+        "phong": [
+          { "idPhong": "B1", "tenPhong": "Căn tin\nDinh Dưỡng", "x": 10, "z": 3, "w": 5, "h": 3, "color": "#fef08a", "door": { "x": 10, "z": 4.5 } },
+          { "idPhong": "X2", "tenPhong": "Nhà Xe\nÔ Tô", "x": 18, "z": 3, "w": 11, "h": 3, "color": "#e2e8f0", "door": { "x": 18, "z": 4.5 } },
+          { "idPhong": "BV", "tenPhong": "Bảo Vệ", "x": 24.5, "z": 3, "w": 2, "h": 3, "color": "#f5df9a", "door": { "x": 24.5, "z": 4.5 } },
+          { "idPhong": "X3", "tenPhong": "Nhà Xe\nMáy", "x": 40, "z": 3, "w": 13, "h": 3, "color": "#e2e8f0", "door": { "x": 40, "z": 4.5 } },
+          { "idPhong": "X1", "tenPhong": "Xe Cấp\nCứu", "x": 2, "z": 7, "w": 5, "h": 2, "color": "#e2e8f0", "door": { "x": 2, "z": 8 } },
+          { "idPhong": "U1", "tenPhong": "Sân\nBóng", "x": 2, "z": 12, "w": 5, "h": 4, "color": "#b9ecd6", "door": { "x": 2, "z": 14 } },
+          { "idPhong": "U2", "tenPhong": "Khoa\nKSNK", "x": 2, "z": 19, "w": 5, "h": 6, "color": "#e2e8f0", "door": { "x": 2, "z": 22 } },
+          { "idPhong": "U3", "tenPhong": "Lò Đốt\nRác", "x": 2, "z": 25, "w": 5, "h": 2, "color": "#cbd5e1", "door": { "x": 2, "z": 26 } },
+          { "idPhong": "P1", "tenPhong": "Khu\nKhám Bệnh", "x": 14, "z": 9, "w": 9, "h": 4, "color": "#ffcccb", "door": { "x": 14, "z": 11 } },
+          { "idPhong": "P2", "tenPhong": "Khoa Ngoại\nYHCT-Nhi", "x": 14, "z": 16, "w": 9, "h": 6, "color": "#90cdf4", "door": { "x": 14, "z": 19 } },
+          { "idPhong": "P3", "tenPhong": "Khoa\nPhụ Sản", "x": 14, "z": 23, "w": 9, "h": 4, "color": "#ffb6c1", "door": { "x": 14, "z": 25 } },
+          { "idPhong": "VP", "tenPhong": "Phòng\nViện Phí", "x": 20, "z": 13, "w": 3, "h": 2, "color": "#fef08a", "door": { "x": 20, "z": 14 } },
+          { "idPhong": "CC", "tenPhong": "Cấp Cứu ĐK\nHành Chính", "x": 32, "z": 9, "w": 21, "h": 4, "color": "#ffcccb", "door": { "x": 32, "z": 11 } },
+          { "idPhong": "TT", "tenPhong": "Khu Trung Tâm\nNội - XN", "x": 32, "z": 16, "w": 21, "h": 6, "color": "#90cdf4", "door": { "x": 32, "z": 19 } },
+          { "idPhong": "KD", "tenPhong": "Khoa Dược", "x": 32, "z": 23, "w": 21, "h": 4, "color": "#a7f3d0", "door": { "x": 32, "z": 25 } },
+          { "idPhong": "TS", "tenPhong": "Tán Sỏi\nCũ", "x": 49, "z": 8, "w": 5, "h": 7, "color": "#e2e8f0", "door": { "x": 49, "z": 11.5 } },
+          { "idPhong": "TN", "tenPhong": "Khoa Truyền\nNhiễm", "x": 49, "z": 18, "w": 5, "h": 9, "color": "#c7c4e5", "door": { "x": 49, "z": 22.5 } },
+          { "idPhong": "DT", "tenPhong": "Nhà Đại\nThể", "x": 49, "z": 26, "w": 5, "h": 3, "color": "#cbd5e1", "door": { "x": 49, "z": 27.5 } },
+          { "idPhong": "W1", "tenPhong": "Bể Nước\nSinh Hoạt", "x": 14, "z": 30, "w": 9, "h": 3, "color": "#90cdf4", "door": { "x": 14, "z": 31.5 } },
+          { "idPhong": "W2", "tenPhong": "Xử Lý\nNước Thải", "x": 26, "z": 30, "w": 9, "h": 3, "color": "#90cdf4", "door": { "x": 26, "z": 31.5 } },
+          { "idPhong": "W3", "tenPhong": "Nhà\nĐiện", "x": 35, "z": 30, "w": 5, "h": 3, "color": "#fef08a", "door": { "x": 35, "z": 31.5 } },
+          { "idPhong": "W4", "tenPhong": "Bể Nước\nNgầm", "x": 45, "z": 30, "w": 5, "h": 3, "color": "#90cdf4", "door": { "x": 45, "z": 31.5 } }
+        ],
+        "features": [
+          { "type": "kiosk", "x": 34, "z": 6 },
+          { "type": "elevator", "x": 48, "z": 12.5, "rotationY": -1.57 }
+        ]
+      },
+      {
+        "idTang": "L3",
+        "tenTang": "Tầng 2",
+        "phong": [
+          { "idPhong": "B1", "tenPhong": "Căn tin\nDinh Dưỡng", "x": 10, "z": 3, "w": 5, "h": 3, "color": "#fef08a", "door": { "x": 10, "z": 4.5 } },
+          { "idPhong": "X2", "tenPhong": "Nhà Xe\nÔ Tô", "x": 18, "z": 3, "w": 11, "h": 3, "color": "#e2e8f0", "door": { "x": 18, "z": 4.5 } },
+          { "idPhong": "BV", "tenPhong": "Bảo Vệ", "x": 24.5, "z": 3, "w": 2, "h": 3, "color": "#f5df9a", "door": { "x": 24.5, "z": 4.5 } },
+          { "idPhong": "X3", "tenPhong": "Nhà Xe\nMáy", "x": 40, "z": 3, "w": 13, "h": 3, "color": "#e2e8f0", "door": { "x": 40, "z": 4.5 } },
+          { "idPhong": "X1", "tenPhong": "Xe Cấp\nCứu", "x": 2, "z": 7, "w": 5, "h": 2, "color": "#e2e8f0", "door": { "x": 2, "z": 8 } },
+          { "idPhong": "U1", "tenPhong": "Sân\nBóng", "x": 2, "z": 12, "w": 5, "h": 4, "color": "#b9ecd6", "door": { "x": 2, "z": 14 } },
+          { "idPhong": "U2", "tenPhong": "Khoa\nKSNK", "x": 2, "z": 19, "w": 5, "h": 6, "color": "#e2e8f0", "door": { "x": 2, "z": 22 } },
+          { "idPhong": "U3", "tenPhong": "Lò Đốt\nRác", "x": 2, "z": 25, "w": 5, "h": 2, "color": "#cbd5e1", "door": { "x": 2, "z": 26 } },
+          { "idPhong": "P1", "tenPhong": "Khu\nKhám Bệnh", "x": 14, "z": 9, "w": 9, "h": 4, "color": "#ffcccb", "door": { "x": 14, "z": 11 } },
+          { "idPhong": "P2", "tenPhong": "Khoa Ngoại\nYHCT-Nhi", "x": 14, "z": 16, "w": 9, "h": 6, "color": "#90cdf4", "door": { "x": 14, "z": 19 } },
+          { "idPhong": "P3", "tenPhong": "Khoa\nPhụ Sản", "x": 14, "z": 23, "w": 9, "h": 4, "color": "#ffb6c1", "door": { "x": 14, "z": 25 } },
+          { "idPhong": "VP", "tenPhong": "Phòng\nViện Phí", "x": 20, "z": 13, "w": 3, "h": 2, "color": "#fef08a", "door": { "x": 20, "z": 14 } },
+          { "idPhong": "CC", "tenPhong": "Cấp Cứu ĐK\nHành Chính", "x": 32, "z": 9, "w": 21, "h": 4, "color": "#ffcccb", "door": { "x": 32, "z": 11 } },
+          { "idPhong": "TT", "tenPhong": "Khu Trung Tâm\nNội - XN", "x": 32, "z": 16, "w": 21, "h": 6, "color": "#90cdf4", "door": { "x": 32, "z": 19 } },
+          { "idPhong": "KD", "tenPhong": "Khoa Dược", "x": 32, "z": 23, "w": 21, "h": 4, "color": "#a7f3d0", "door": { "x": 32, "z": 25 } },
+          { "idPhong": "TS", "tenPhong": "Tán Sỏi\nCũ", "x": 49, "z": 8, "w": 5, "h": 7, "color": "#e2e8f0", "door": { "x": 49, "z": 11.5 } },
+          { "idPhong": "TN", "tenPhong": "Khoa Truyền\nNhiễm", "x": 49, "z": 18, "w": 5, "h": 9, "color": "#c7c4e5", "door": { "x": 49, "z": 22.5 } },
+          { "idPhong": "DT", "tenPhong": "Nhà Đại\nThể", "x": 49, "z": 26, "w": 5, "h": 3, "color": "#cbd5e1", "door": { "x": 49, "z": 27.5 } },
+          { "idPhong": "W1", "tenPhong": "Bể Nước\nSinh Hoạt", "x": 14, "z": 30, "w": 9, "h": 3, "color": "#90cdf4", "door": { "x": 14, "z": 31.5 } },
+          { "idPhong": "W2", "tenPhong": "Xử Lý\nNước Thải", "x": 26, "z": 30, "w": 9, "h": 3, "color": "#90cdf4", "door": { "x": 26, "z": 31.5 } },
+          { "idPhong": "W3", "tenPhong": "Nhà\nĐiện", "x": 35, "z": 30, "w": 5, "h": 3, "color": "#fef08a", "door": { "x": 35, "z": 31.5 } },
+          { "idPhong": "W4", "tenPhong": "Bể Nước\nNgầm", "x": 45, "z": 30, "w": 5, "h": 3, "color": "#90cdf4", "door": { "x": 45, "z": 31.5 } }
+        ],
+        "features": [
+          { "type": "kiosk", "x": 43, "z": 16 },
+          { "type": "elevator", "x": 48, "z": 12.5, "rotationY": -1.57 }
+        ]
+      }
+    ]
+  }
+}
