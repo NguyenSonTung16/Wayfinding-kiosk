@@ -60,7 +60,7 @@ function App() {
       <div className="kiosk-ui-layer">
         
         {/* Tiêu đề Bệnh viện động */}
-        <div className="ui-hospital-header">
+        <div className="ui-hospital-header" style={{ pointerEvents: 'auto' }}>
            <h2>{benhvien.tenBV}</h2>
         </div>
 

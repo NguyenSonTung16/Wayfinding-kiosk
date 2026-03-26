@@ -47,8 +47,8 @@ export class WebGLApp {
       RIGHT: THREE.MOUSE.ROTATE
     };
     this.controls.touches = {
-      ONE: THREE.TOUCH.DOLLY_ROTATE,
-      TWO: THREE.TOUCH.PAN  // 2 ngón → Pinch zoom + xoay camera
+      ONE: THREE.TOUCH.ROTATE,
+      TWO: THREE.TOUCH.DOLLY_PAN
     };
 
     // Smooth scroll / damping
@@ -67,6 +67,7 @@ export class WebGLApp {
 
     // Bật Pan
     this.controls.enablePan = true;
+    this.controls.enableZoom = true;
 
     // Look at center
     this.controls.target.set(0, 0, 0);
