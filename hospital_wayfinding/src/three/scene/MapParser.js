@@ -5,6 +5,7 @@ import { Bus } from './objects/Bus';
 import { Stairs } from './objects/Stairs';
 import { DashedPath } from './objects/DashedPath';
 import { GroundLabel } from './objects/GroundLabel';
+import { Elevator } from './objects/Elevator';
 
 export class MapParser {
   constructor(floorData) {
@@ -14,15 +15,15 @@ export class MapParser {
 
     this.group = new THREE.Group();
 
-    // Tự động detect nếu data có bọc mảng rooms bên trong hay không
-    this.roomsData = floorData.rooms ? floorData.rooms : floorData;
-    this.featuresData = floorData.features ? floorData.features : [];
+    // Sử dụng cấu trúc phong đã chuẩn hóa
+    this.roomsData = floorData.phong || [];
+    this.featuresData = floorData.features || [];
 
     // Tự động phân tích cực Boundaries Sơ đồ để định tuyến (Auto-Center)
     let minX = Infinity, maxX = -Infinity;
     let minZ = Infinity, maxZ = -Infinity;
 
-    if (this.roomsData && this.roomsData.length > 0) {
+    if (this.roomsData.length > 0) {
       this.roomsData.forEach(room => {
         const left = room.x - room.w / 2;
         const right = room.x + room.w / 2;
@@ -89,7 +90,9 @@ export class MapParser {
       this.group.add(block);
 
       // 3. Sprite Nhãn phòng xoay theo màn hình - Sử dụng Hệ thống tính Tỉ lệ Tự động
-      const textData = createTextTexture(`${room.id}\n${room.name}`);
+      const roomId = room.idPhong;
+      const roomName = room.tenPhong;
+      const textData = createTextTexture(`${roomId}\n${roomName}`);
       const spriteMat = new THREE.SpriteMaterial({
         map: textData.texture,
         transparent: true,
@@ -106,6 +109,7 @@ export class MapParser {
       textSprite.position.set(px, blockHeight + 0.1, pz); 
       this.group.add(textSprite);
     });
+
 
     // 4. Giải thuật Động Xây Dựng Đặc Tuyến Kiosk - Điểm Nhấn Tầng (Features)
     // Bóc tách sự ràng buộc của Mã Dữ Liệu ở Tầng L1. Tầng nào có khai báo Feature thì mới Render!
@@ -133,6 +137,10 @@ export class MapParser {
         case 'ground_label':
           const gLabel = new GroundLabel(feature.text, feature.x, feature.z, this.OFFSET_X, this.OFFSET_Z, feature.width);
           this.group.add(gLabel.group);
+          break;
+        case 'elevator':
+          const elevator = new Elevator(feature.x, feature.z, this.OFFSET_X, this.OFFSET_Z, feature.rotationY || 0);
+          this.group.add(elevator.group);
           break;
         default:
           break;

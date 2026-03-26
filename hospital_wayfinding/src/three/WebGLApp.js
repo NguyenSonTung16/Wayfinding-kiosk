@@ -47,8 +47,8 @@ export class WebGLApp {
       RIGHT: THREE.MOUSE.ROTATE
     };
     this.controls.touches = {
-      ONE: THREE.TOUCH.PAN,
-      TWO: THREE.TOUCH.DOLLY_ROTATE  // 2 ngón → Pinch zoom + xoay camera
+      ONE: THREE.TOUCH.DOLLY_ROTATE,
+      TWO: THREE.TOUCH.PAN  // 2 ngón → Pinch zoom + xoay camera
     };
 
     // Smooth scroll / damping
